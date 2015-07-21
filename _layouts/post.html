@@ -41,6 +41,11 @@ layout: default
                     </li>
                     {% endif %}
                 </ul>
+								{% if site.disqus_shortname and page.comments != false %}
+                <ul class="disqus">
+										<div id="disqus_thread" aria-live="polite">{% include disqus-comments.html %}</div>
+                </ul>
+                {% endif %}
 
             </div>
         </div>
